@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>PET SHOP - Pet Shop Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+
+    <style>
+        /* Form container */
+        .form-container {
+            max-width: 700px;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            position: relative;
+            margin: 20px auto;
+            border-radius: 5px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Form labels */
+        label {
+            font-weight: bold;
+        }
+
+        /* Form inputs */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        /* Submit button */
+        .btn-primary {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Submit button hover effect */
+        .btn-primary:hover {
+            background-color: #45a049;
+        }
+
+        /* Form alignment */
+        .form-container.left {
+            float: left;
+            margin-right: 20px;
+        }
+
+        .form-container.right {
+            float: right;
+            margin-left: 20px;
+        }
+
+        #first {
+            /* background-image: url('img/cow7.jpg'); */
+            background-color: #45a049;
+        }
+
+        .symptom-table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 2px solid green; /* Add green border */
+            /* Add border */
+        }
+
+        .symptom-table th,
+        .symptom-table td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            /* Add bottom border */
+        }
+
+        .symptom-table th {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid border-bottom d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-4 text-center py-2">
+                <div class="d-inline-flex align-items-center">
+                    <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
+                    <div class="text-start">
+                        <h6 class="text-uppercase mb-1">Our Office</h6>
+                        <span>123 Street, Kigali, Rwanda</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center border-start border-end py-2">
+                <div class="d-inline-flex align-items-center">
+                    <i class="bi bi-envelope-open fs-1 text-primary me-3"></i>
+                    <div class="text-start">
+                        <h6 class="text-uppercase mb-1">Email Us</h6>
+                        <span>animalsysy@outlook.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center py-2">
+                <div class="d-inline-flex align-items-center">
+                    <i class="bi bi-phone-vibrate fs-1 text-primary me-3"></i>
+                    <div class="text-start">
+                        <h6 class="text-uppercase mb-1">Call Us</h6>
+                        <span>+250785030772</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
+        <a href="index.html" class="navbar-brand ms-lg-5">
+            <h1 class="m-0 text-uppercase text-dark"><i class="bi bi-shop fs-1 text-primary me-3"></i> Rwanda
+                Agriculture Board(RAB)</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">Register</a>
+                <a href="service.html" class="nav-item nav-link">Animal-Sick</a>
+                <a href="product.html" class="nav-item nav-link">Rg-Animal</a>
+
+                <a href="contact.html" class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Contact
+                    <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <div id="first">
+        <!-- Services Start -->
+
+        <form class="form-container" id="myForm">
+            <h2>Register When Your Animal Is Sick</h2>
+            <hr>
+            <hr>
+
+            <div class="form-group">
+                <label for="name">Animal Id:</label>
+                <input type="text" class="form-control" id="animalid" placeholder="Enter your Id">
+            </div>
+            <div class="form-group">
+                <label for="name">Crete Pin:</label>
+                <input type="password" class="form-control" id="CretePin" placeholder="Enter your Pin ">
+            </div>
+            <div class="form-group">
+                <label for="email">Province:</label>
+                <input type="email" class="form-control" id="provide">
+            </div>
+            <div class="form-group">
+                <label for="phone">District:</label>
+                <input type="tel" class="form-control" id="disprict">
+            </div>
+            <div class="form-group">
+                <label for="address">Sector:</label>
+                <input type="text" class="form-control" id="Sector">
+            </div>
+
+            <div class="form-group">
+                <label for="animalName">Cell:</label>
+                <input type="text" class="form-control" id="cell">
+            </div>
+            <div class="form-group">
+                <label for="animalBreed">Village:</label>
+                <input type="text" class="form-control" id="village">
+            </div>
+            <div class="form-group">
+                <label for="animalAge">date_detected:</label>
+                <input type="date" class="form-control" id="dateafected">
+            </div>
+            <div class="form-group">
+                <label for="animalAge">num_affected:</label>
+                <input type="number" class="form-control" id="num_affected">
+            </div>
+
+            <div id="second">
+                <div class="form-group">
+                    <label for="animalAge">Description:</label>
+                    <textarea class="form-control" id="Description"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="animalBreed">symptoms:</label>
+                    <hr>
+                    <div id="villageContainer"></div>
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <label for="animalAge">Other symptoms If Any:</label>
+                    <textarea class="form-control" id="OthersymptomsIfAny"></textarea>
+                </div>
+
+
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary" onclick="submitData(event)">Submit</button><br>
+
+
+        </form>
+
+        <!-- Services End -->
+
+    </div>
+
+    <!-- Testimonial Start -->
+
+    <!-- Testimonial End -->
+
+
+    <!-- Pricing Plan Start -->
+
+    <!-- Pricing Plan End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-light mt-5 py-5">
+        <div class="container pt-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">Get In Touch</h5>
+                    <p class="mb-4">No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed
+                        dolor</p>
+                    <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>info@example.com</p>
+                    <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+012 345 67890</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">Quick Links</h5>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About
+                            Us</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our
+                            Services</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The
+                            Team</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest
+                            Blog</a>
+                        <a class="text-body" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">Popular Links</h5>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About
+                            Us</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our
+                            Services</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The
+                            Team</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest
+                            Blog</a>
+                        <a class="text-body" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">Newsletter</h5>
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control p-3" placeholder="Your Email">
+                            <button class="btn btn-primary">Sign Up</button>
+                        </div>
+                    </form>
+                    <h6 class="text-uppercase mt-4 mb-3">Follow Us</h6>
+                    <div class="d-flex">
+                        <a class="btn btn-outline-primary btn-square me-2" href="#"><i class="bi bi-twitter"></i></a>
+                        <a class="btn btn-outline-primary btn-square me-2" href="#"><i class="bi bi-facebook"></i></a>
+                        <a class="btn btn-outline-primary btn-square me-2" href="#"><i class="bi bi-linkedin"></i></a>
+                        <a class="btn btn-outline-primary btn-square" href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-12 text-center text-body">
+                    <a class="text-body" href="">Terms & Conditions</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">Privacy Policy</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">Customer Support</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">Payments</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">Help</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">FAQs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white-50 py-4">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-md-0">&copy; <a class="text-white" href="#">Your Site Name</a>. All Rights Reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed by <a class="text-white" href="https://htmlcodex.com">HTML Codex</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+
+
+    <script>
+        // Assume you have an array of villages retrieved from the database
+
+
+        // var villages = ["Village 1", "Village 2", "Village 3"];
+
+        // var villageContainer = document.getElementById("villageContainer");
+
+        // // Generate checkboxes dynamically based on the villages array
+        // villages.forEach(function (village) {
+        //     var checkboxDiv = document.createElement("div");
+        //     var checkbox = document.createElement("input");
+        //     checkbox.type = "checkbox";
+        //     checkbox.id = village;
+        //     checkbox.name = "village";
+        //     checkbox.value = village;
+
+        //     var label = document.createElement("label");
+        //     label.htmlFor = village;
+        //     label.appendChild(document.createTextNode(village));
+
+        //     checkboxDiv.appendChild(checkbox);
+        //     checkboxDiv.appendChild(label);
+        //     villageContainer.appendChild(checkboxDiv);
+        // });
+
+
+        // async function fetchUserData() {
+        //     var userTp = document.getElementById('usertype');
+        //     var user = await fetch('http://127.0.0.1:8000/users/');
+        //     var userdata = await user.json();
+
+        //     for (var i = 0; i < userdata.length; i++) {
+        //         var option = document.createElement('option');
+        //         option.value = userdata[i].user_type;
+        //         option.textContent = userdata[i].user_type;
+        //         userTp.appendChild(option);
+        //     }
+        // }
+
+        async function submitData(event) {
+            event.preventDefault(); // prevent the form from submitting normally
+
+            var AnimalId = document.getElementById('animalid').value;
+            var CretePin = document.getElementById('CretePin').value;
+            var Province = document.getElementById('provide').value;
+            var District = document.getElementById('disprict').value;
+            var Sector = document.getElementById('Sector').value;
+            var Cell = document.getElementById('cell').value;
+            var Village = document.getElementById('village').value;
+            var date_detected = document.getElementById('dateafected').value;
+            var num_affected = document.getElementById('num_affected').value;
+            var Description = document.getElementById('Description').value;
+            var symptoms = document.getElementById('villageContainer').value;
+            var OthersymptomsIfAny = document.getElementById('OthersymptomsIfAny').value;
+
+            var symptomsdata = await fetch('http://127.0.0.1:8000/diseases/');
+            var symptomsresult = await symptomsdata.json();
+            var villageContainer = document.getElementById("villageContainer");
+
+            var table = document.createElement("table");
+            table.classList.add("symptom-table");
+
+            // Create table header
+            var thead = document.createElement("thead");
+            var headerRow = document.createElement("tr");
+            var headerCell = document.createElement("th");
+            headerCell.textContent = "Symptom";
+            headerRow.appendChild(headerCell);
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+
+            // Create table body
+            var tbody = document.createElement("tbody");
+
+            for (var i = 0; i < symptomsresult.length; i++) {
+                var symptom = symptomsresult[i].symptoms;
+
+                var row = document.createElement("tr");
+
+                // Create checkbox cell
+                var checkboxCell = document.createElement("td");
+                var checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.name = "symptom";
+                checkbox.value = symptom;
+                checkboxCell.appendChild(checkbox);
+
+                // Create label cell
+                var labelCell = document.createElement("td");
+                var label = document.createElement("label");
+                label.htmlFor = symptom.id;
+                label.appendChild(document.createTextNode(symptom));
+                labelCell.appendChild(label);
+
+                // Append cells to the row
+                row.appendChild(checkboxCell);
+                row.appendChild(labelCell);
+
+                // Append the row to the table body
+                tbody.appendChild(row);
+            }
+
+            table.appendChild(tbody);
+            villageContainer.appendChild(table);
+
+
+
+            try {
+                const response = await fetch('http://127.0.0.1:8000/disease-occurrences/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+
+                    },
+                    body: JSON.stringify({
+
+                        symptoms: symptoms,
+                        other_symptoms: OthersymptomsIfAny,
+                        province: Province,
+                        district: District,
+                        sector: Sector,
+                        cell: Cell,
+                        village: Village,
+                        date_detected: date_detected,
+                        num_affected: num_affected,
+                        description: Description,
+                        animal: AnimalId,
+                        createPin: CretePin
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                console.log(data);
+            } catch (e) {
+                console.log(`An error occurred: ${e}`);
+            }
+        }
+
+
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            // await fetchUserData();
+            var form = document.getElementById('myForm');
+            form.addEventListener('submit', submitData);
+        });
+
+        document.addEventListener('DOMContentLoaded', submitData);
+
+    </script>
+</body>
+
+</html>

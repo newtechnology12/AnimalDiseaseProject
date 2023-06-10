@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Animal Diseases Prevalence Analytics System</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+
+    <style>
+        /* Form container */
+        .form-container {
+            max-width: 700px;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            position: relative;
+            margin: 20px auto;
+            border-radius: 5px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Form labels */
+        label {
+            font-weight: bold;
+        }
+
+        /* Form inputs */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        /* Submit button */
+        .btn-primary {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Submit button hover effect */
+        .btn-primary:hover {
+            background-color: #45a049;
+        }
+
+        /* Form alignment */
+        .form-container.left {
+            float: left;
+            margin-right: 20px;
+        }
+
+        .form-container.right {
+            float: right;
+            margin-left: 20px;
+        }
+
+        #first {
+            /* background-image: url('img/cow7.jpg'); */
+            background-color: #45a049;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid border-bottom d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-4 text-center py-2">
+                <div class="d-inline-flex align-items-center">
+                    <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
+                    <div class="text-start">
+                        <h6 class="text-uppercase mb-1">Our Office</h6>
+                        <span>123 Street, Kigali, Rwanda</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center border-start border-end py-2">
+                <div class="d-inline-flex align-items-center">
+                    <i class="bi bi-envelope-open fs-1 text-primary me-3"></i>
+                    <div class="text-start">
+                        <h6 class="text-uppercase mb-1">Email Us</h6>
+                        <span>animalsysy@outlook.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center py-2">
+                <div class="d-inline-flex align-items-center">
+                    <i class="bi bi-phone-vibrate fs-1 text-primary me-3"></i>
+                    <div class="text-start">
+                        <h6 class="text-uppercase mb-1">Call Us</h6>
+                        <span>+250785030772</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
+        <a href="index.html" class="navbar-brand ms-lg-5">
+            <h1 class="m-0 text-uppercase text-dark"><i class="bi bi-shop fs-1 text-primary me-3"></i> Rda
+                AgBoard(RAB)</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">Register</a>
+                <a href="service.html" class="nav-item nav-link">Animal-Sick</a>
+                <a href="product.html" class="nav-item nav-link">Rg-Animal</a>
+
+                <a href="contact.html" class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Contact
+                    <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <div id="first">
+        <!-- Services Start -->
+
+        <form class="form-container" id="myForm">
+            <h2>Register Farmer Information and Their Animal</h2>
+
+            <hr>
+            <hr>
+            <div id="firstone">
+                <div class="form-group">
+                    <label for="name">Owner ID:</label>
+                    <input type="text" class="form-control" id="ownerid">
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="animal">Education:</label>
+                    <select class="form-control" id="Education">
+
+
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="animal">Gender:</label>
+                    <select class="form-control" id="Gender">
+
+
+                    </select>
+                </div>
+            </div>
+
+            <div id="second">
+
+                <div class="form-group">
+                    <label for="animal">Status:</label>
+                    <select class="form-control" id="Status">
+
+
+
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="animal">Province:</label>
+                    <select class="form-control" id="Province">
+                        <option value="dog">Select</option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="animal">District:</label>
+                    <select class="form-control" id="District">
+                        <option value="dog">Select</option>
+
+
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="animal">Sector:</label>
+                    <select class="form-control" id="Sector">
+                        <option value="dog">Select</option>
+
+
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="animal">Cell:</label>
+                    <select class="form-control" id="Cell">
+                        <option value="dog">Dog</option>
+
+
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="animal">Village:</label>
+                    <select class="form-control" id="Village">
+                        <option value="dog">Dog</option>
+
+
+                    </select>
+                </div>
+            </div>
+            <button type="button" id="nextButton" class="btn btn-primary" onclick="nextStep()">Next</button><br>
+            <button type="submit" id="submitButton" class="btn btn-primary" onclick="showdata(event)">submit</button><br>
+
+
+
+        </form>
+
+        <!-- Services End -->
+
+    </div>
+
+    <!-- Testimonial Start -->
+
+    <!-- Testimonial End -->
+
+
+    <!-- Pricing Plan Start -->
+
+    <!-- Pricing Plan End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-light mt-5 py-5">
+        <div class="container pt-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">Get In Touch</h5>
+                    <p class="mb-4">No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed
+                        dolor</p>
+                    <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>info@example.com</p>
+                    <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+012 345 67890</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">Quick Links</h5>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About
+                            Us</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our
+                            Services</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The
+                            Team</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest
+                            Blog</a>
+                        <a class="text-body" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">Popular Links</h5>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About
+                            Us</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our
+                            Services</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The
+                            Team</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest
+                            Blog</a>
+                        <a class="text-body" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">Newsletter</h5>
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control p-3" placeholder="Your Email">
+                            <button class="btn btn-primary">Sign Up</button>
+                        </div>
+                    </form>
+                    <h6 class="text-uppercase mt-4 mb-3">Follow Us</h6>
+                    <div class="d-flex">
+                        <a class="btn btn-outline-primary btn-square me-2" href="#"><i class="bi bi-twitter"></i></a>
+                        <a class="btn btn-outline-primary btn-square me-2" href="#"><i class="bi bi-facebook"></i></a>
+                        <a class="btn btn-outline-primary btn-square me-2" href="#"><i class="bi bi-linkedin"></i></a>
+                        <a class="btn btn-outline-primary btn-square" href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-12 text-center text-body">
+                    <a class="text-body" href="">Terms & Conditions</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">Privacy Policy</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">Customer Support</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">Payments</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">Help</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">FAQs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white-50 py-4">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-md-0">&copy; <a class="text-white" href="#">Your Site Name</a>. All Rights Reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed by <a class="text-white" href="https://htmlcodex.com">HTML Codex</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+
+    <script>
+        function nextStep() {
+            var firstPart = document.getElementById("firstone");
+            var secondPart = document.getElementById("second");
+            var nextButton = document.getElementById("nextButton");
+            var submitButton = document.getElementById("submitButton");
+
+
+            var button = nextButton.addEventListener("click", function () {
+                firstPart.style.display = "none";
+                nextButton.style.display = "none";
+                submitButton.style.display = "block";
+                secondPart.style.display = "block";
+
+            });
+        }
+
+        function submitForm() {
+            var form = document.getElementById("myForm");
+            form.submit();
+            // window.location.href = "product.html"; // Replace "next-page.html" with the URL of your next page
+        }
+
+        // Hide the second part when the form loads
+        document.addEventListener('DOMContentLoaded', function () {
+            var secondPart = document.getElementById("second");
+            var submitButton = document.getElementById("submitButton");
+            secondPart.style.display = "none";
+            submitButton.style.display = "none";
+        });
+
+
+
+
+        // deling the data from database
+
+        async function showdata(event) {
+
+            // var patientData = {};
+
+            var Ownerid = document.getElementById('ownerid').value;
+
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value
+            var ownerPhone = document.getElementById('phone').value
+
+            var Gender = document.getElementById('Gender');
+            var Status = document.getElementById('Status')
+            var Province = document.getElementById('Province');
+            var District = document.getElementById('District');
+            var Sector = document.getElementById('Sector');
+            var Cell = document.getElementById('Cell');
+            var Village = document.getElementById('Village');
+            var Education = document.getElementById('Education');
+
+            var Gender1 = document.getElementById('Gender').value;
+            var Status2 = document.getElementById('Status').value
+            var Province3 = document.getElementById('Province').value;
+            var District4 = document.getElementById('District').value;
+            var Sector5 = document.getElementById('Sector').value;
+            var Cell6 = document.getElementById('Cell').value;
+            var Village7 = document.getElementById('Village').value;
+            var Education8 = document.getElementById('Education').value;
+
+            console.log('Gender1: '+Gender1)
+            console.log('Status2: '+Status2)
+            console.log('Province3: '+Province3)
+            console.log('Sector5: '+Sector5)
+            console.log('Cell6: '+Cell6)
+            console.log('Village7: '+Village7)
+            console.log('Education8: '+Education8)
+            
+
+            event.preventDefault(); // Prevent form submission
+
+
+            var randomNumber = Math.floor(Math.random() * 900000) + 100000;
+            var OwnerIdbyRandomly = "OWN-" + randomNumber;
+            console.log('OwnerIdbyRandomly: ' + OwnerIdbyRandomly)
+            console.log('name: '+name)
+
+
+            var Ownerid = document.getElementById('ownerid').value = OwnerIdbyRandomly;
+
+
+
+
+            // National_ID_Type
+            const response = await fetch('http://127.0.0.1:8000/Educationdata/');
+            const data = await response.json();
+
+            for (let i = 0; i < data.length; i++) {
+                // console.log(data[i])
+                const option = document.createElement('option');
+                option.value = data[i].Education_Description;
+                option.textContent = data[i].Education_Description;
+                Education.appendChild(option); // Append to the select element
+                // console.log(data[i].ID_Type)
+            }
+
+            // National_ID_Type
+            var gender = await fetch('http://127.0.0.1:8000/Genderdata/');
+            var patientGendaData = await gender.json();
+            for (var i = 0; i < patientGendaData.length; i++) {
+                var option = document.createElement('option');
+                option.value = patientGendaData[i].GenderDescription;
+                option.textContent = patientGendaData[i].GenderDescription;
+                Gender.appendChild(option)
+
+            }
+
+            // Marital_Statusdata
+            var Marital_Status = await fetch('http://127.0.0.1:8000/Marital_Statusdata/');
+            var Marital_Statusdata = await Marital_Status.json();
+            for (var i = 0; i < Marital_Statusdata.length; i++) {
+                var option = document.createElement('option');
+                option.value = Marital_Statusdata[i].Marital_Status_Description;
+                option.textContent = Marital_Statusdata[i].Marital_Status_Description;
+                Status.appendChild(option)
+                // console.log(Marital_Statusdata[i].Marital_Status_Description)
+
+
+            }
+
+
+            // Province
+            var Provinceda = await fetch('http://127.0.0.1:8000/Provincedata/');
+            var Provincedata = await Provinceda.json();
+
+            for (var i = 0; i < Provincedata.length; i++) {
+                var option = document.createElement('option');
+                option.value = Provincedata[i].Province_List_Description;
+                option.textContent = Provincedata[i].Province_List_Description;
+                Province.appendChild(option);
+            }
+
+            // District
+            var Districtdata = await fetch('http://127.0.0.1:8000/Districtdata/');
+            var districtresult = await Districtdata.json();
+
+            Province.addEventListener('change', function () {
+                var selectedProvince = Province.value;
+                // patientData.selectedProvince = selectedProvince;
+                District.innerHTML = ''; // Clear previous options
+
+                for (var i = 0; i < districtresult.length; i++) {
+                    if (districtresult[i].Province_List_Description === selectedProvince) {
+                        var option = document.createElement('option');
+                        option.value = districtresult[i].District_List_Description;
+                        option.textContent = districtresult[i].District_List_Description;
+                        District.appendChild(option);
+                    }
+                }
+            });
+
+
+            // sector
+            var sectordata = await fetch('http://127.0.0.1:8000/Sectordata/');
+            var sectorresult = await sectordata.json();
+
+            District.addEventListener('change', function () {
+                var selectedDistrict = District.value;
+                // patientData.selectedDistrict = selectedDistrict;
+                Sector.innerHTML = ''; // Clear previous options
+
+                for (var i = 0; i < sectorresult.length; i++) {
+                    if (sectorresult[i].District_List_Description === selectedDistrict) {
+                        var option = document.createElement('option');
+                        option.value = sectorresult[i].Sector_List_Description;
+                        option.textContent = sectorresult[i].Sector_List_Description;
+                        Sector.appendChild(option);
+                    }
+                }
+            });
+
+
+            // cell
+            var celldata = await fetch('http://127.0.0.1:8000/Celldata/');
+            var cellresult = await celldata.json();
+
+            Sector.addEventListener('change', function () {
+                var selectedSector = Sector.value;
+                // patientData.selectedSector = selectedSector;
+                Cell.innerHTML = ''; // Clear previous options
+
+                for (var i = 0; i < cellresult.length; i++) {
+
+                    if (cellresult[i].Sector_List_Description === selectedSector) {
+                        console.log('cellresult ' + cellresult[i].Cell_List_Description)
+                        var option = document.createElement('option');
+                        option.value = cellresult[i].Cell_List_Description;
+                        option.textContent = cellresult[i].Cell_List_Description;
+                        Cell.appendChild(option);
+                    }
+                }
+            });
+
+
+
+            // village
+            var villagedata = await fetch('http://127.0.0.1:8000/Villagedata/');
+            var villageresult = await villagedata.json();
+
+            Cell.addEventListener('change', function () {
+                var selectedCell = Cell.value;
+                // patientData.selectedCell = selectedCell;
+                Village.innerHTML = ''; // Clear previous options
+
+                for (var i = 0; i < villageresult.length; i++) {
+                    if (villageresult[i].Cell_List_Description === selectedCell) {
+                        var option = document.createElement('option');
+                        option.value = villageresult[i].Vilage_List_Description;
+                        option.textContent = villageresult[i].Vilage_List_Description;
+                        Village.appendChild(option);
+                    }
+                }
+            });
+
+
+            const patientData = {
+                Ownerid,
+                name,
+                email,
+                ownerPhone,
+                Gender: Gender.value,
+                Status: Status.value,
+                Province: Province.value,
+                District: District.value,
+                Sector: Sector.value,
+                Cell: Cell.value,
+                Village: Village.value,
+                Education: Education.value,
+
+            };
+
+            //Store the patient data in the session storage
+            sessionStorage.setItem('patientData', JSON.stringify(patientData));
+
+
+            try {
+                const response = await fetch("http://127.0.0.1:8000/animal-owners/", {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(
+                        {
+
+
+                            names: name,
+                            ownerId: Ownerid,
+                            Email: email,
+                            Telephone: ownerPhone,
+                            Education: Education8,
+                            Status: Status2,
+                            gender: Gender1,
+                            province: Province3,
+                            district: District4,
+                            sector: Sector5,
+                            cell: Cell6,
+                            village: null
+
+                        }
+                    )
+                });
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                console.log(data);
+            } catch (e) {
+                console.log(`An error occurred: ${e}`);
+            }
+        }
+        document.addEventListener('submit', function(){
+                var form = document.getElementById('myForm');
+                form.addEventListener('submit',showdata)
+            });
+
+        document.addEventListener('DOMContentLoaded', showdata);
+    </script>
+
+
+</body>
+
+</html>
